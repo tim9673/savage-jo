@@ -1,0 +1,135 @@
+@font-face {
+  font-family: Serico;
+  font-weight: 500;
+  src: local('Serico'), url(./Serico-Regular.otf) format('opentype');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+button {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  border-color: rgb(25, 186, 3);
+  color: rgb(25, 186, 3);
+}
+
+h2 {
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 0;
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.circle {
+  height: 400px;
+  width: 400px;
+  bottom: -50px;
+  left: -25px;
+  position: absolute;
+  background-color: rgb(25, 200, 20);
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.poster {
+  max-width: 30%;
+  align-self: start;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+.poster img {
+  display: block;
+  max-width: 100%;
+}
+
+.poster:hover .details {
+  transform: translateY(0);
+}
+
+.poster_container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1040px;
+  margin: 0 auto;
+  align-self: center;
+  text-align: left;
+}
+
+.background {
+  min-height: 100vh;
+  background: rgb(233, 195, 0);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.title {
+  position: relative;
+  display: inline-block;
+  padding-top: 150px;
+}
+
+.title h1 {
+  font-size: 56px;
+  color: rgb(252, 186, 3);
+  display: inline-block;
+  text-shadow: -2px 0 rgba(0, 0, 0, 0.5), 0 2px rgba(0, 0, 0, 0.5), 2px 0 rgba(0, 0, 0, 0.5), 0 -2px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  letter-spacing: 10px;
+  margin-bottom: 12px;
+  font-family: Serico;
+  position: relative;
+  z-index: 1;
+}
+
+.title strong {
+  color: rgb(252, 186, 3);
+  text-shadow: -2px 0 rgba(180, 0, 0, 1), 0 2px rgba(180, 0, 0, 1), 2px 0 rgba(180, 0, 0, 1), 0 -2px rgba(180, 0, 0, 1);
+}
+
+.details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.85);
+  color: rgb(245, 245, 245);
+  transform: translateY(100%);
+  transition: 1s;
+  overflow-y: auto;
+  min-height: 100%;
+  padding: 12px;
+}
+
+.footer {
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0);
+  font-size: 32px;
+}

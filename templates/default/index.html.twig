@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="bike.css" />
+{% endblock %}
+
+{% block title %}SavageJo{% endblock %}
+
+{% block body %}
+  <div class="background">
+    {% include 'bike.html.twig' %}
+    <div class="title">
+      <h1>
+        Savage
+        <strong>Jo</strong>
+      </h1>
+      <div class="circle"></div>
+    </div>
+    <h2>Actor - Ben Watts</h2>
+    <div class="poster_container">
+      {% for film in films %}
+        <div class="poster">
+          <img src="{{ film.poster }}" alt="{{ film.name }}" />
+          <div class="details">
+            <h4>{{ film.heading }}</h4>
+            <p>{{ film.description }}</p>
+            <button data-film="{{ film|json_encode }}">Watch Trailer</button>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  <div class="footer">
+    <a target="_blank" href="https://pro.imdb.com/name/nm9637793?ref_=ib_nv_usr_prof">IMDB</a>
+    <a target="_blank" href="https://pro.imdb.com/name/nm9637793?ref_=ib_nv_usr_prof">FaceBook</a>
+  </div>
+  </div>
+{% endblock %}

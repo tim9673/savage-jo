@@ -1,0 +1,5 @@
+{
+  "editor.formatOnSave": true,
+  "php.executablePath": "C:\\xampp\\php\\php.exe",
+  "typescript.tsdk": "node_modules\\typescript\\lib"
+}
